@@ -1,0 +1,18 @@
+.carrinhoContainer {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  font-family: 'Plus Jakarta Sans', 'Roboto', sans-serif;
+}
+
+.carrinhoGrid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+}
+
+@media (max-width: 900px) {
+  .carrinhoGrid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,105 @@
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1920px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;  
+  color: var(--verde-color);
+  text-align: center;
+  background-image: url('/SectionCart.svg');
+  background-size: cover;
+  background-position: center;
+  font-family: 'Plus Jakarta Sans', 'Roboto', sans-serif;
+  padding: 0 20px;
+}
+
+.container h1 {
+  font-size: 48px;
+  margin: 0;
+  font-weight: bold;
+  color: var(--verde-color);
+}
+
+.divStyle {
+  margin-top: 10px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--verde-color);
+}
+
+.divStyle span {
+  cursor: default;
+}
+
+.divStyle .arrow {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  mask: url('data:image/svg+xml;utf8,<svg fill="white" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6z"/></svg>') no-repeat center / contain;
+  background-color: black;
+}
+
+.container a {
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.3s ease;
+  cursor: pointer;
+}
+.container a:hover {
+  text-decoration: underline;
+}
+
+
+@media (max-width: 1024px) {
+  .container {
+    height: 250px;
+  }
+  .container h1 {
+    font-size: 36px;
+  }
+  .divStyle {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    height: 200px;
+  }
+  .container h1 {
+    font-size: 28px;
+  }
+  .divStyle {
+    font-size: 14px;
+    gap: 6px;
+  }
+  .divStyle .arrow {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    height: 140px;
+    background-image: none;
+    background-color: #f5f5f5; 
+  }
+  .container h1 {
+    font-size: 24px;
+  }
+  .divStyle {
+    font-size: 12px;
+    gap: 4px;
+  }
+  .divStyle .arrow {
+    width: 12px;
+    height: 12px;
+  }
+}
+

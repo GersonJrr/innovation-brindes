@@ -1,0 +1,148 @@
+.carrinhoItem {
+  display: grid;
+  grid-template-columns: 80px 1fr 100px 130px 100px 40px;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+  background: white;
+  border-radius: 6px;
+}
+
+.itemImagem {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 6px;
+  background: #fff;
+}
+
+.itemDetalhes {
+  font-size: 1rem;
+  color: #333;
+}
+
+.itemNome {
+  margin: 0;
+  font-weight: 600;
+}
+
+.itemPreco {
+  font-weight: 600;
+  color: #2a7a37;
+}
+
+.itemQuantidade {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btnQtd {
+  width: 25px;
+  height: 22px;
+  background: #2a7a37;
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.2s ease;
+}
+
+.btnQtd:hover {
+  background: #1e5524;
+}
+.inputQtd {
+  width: 45px;
+  height: 28px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  outline: none;
+  text-align: center;
+}
+
+.itemSubtotal {
+  font-weight: 600;
+  color: #2a7a37;
+}
+
+.btnRemover {
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: #d32f2f;
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.2s ease;
+}
+
+.btnRemover:hover {
+  color: #a02525;
+}
+
+
+@media (max-width: 1024px) {
+  .carrinhoItem {
+    grid-template-columns: 60px 1fr 80px 100px 80px 30px;
+    gap: 0.5rem;
+  }
+
+  .itemImagem {
+    width: 60px;
+    height: 60px;
+  }
+
+  .btnQtd {
+    width: 24px;
+    height: 24px;
+  }
+
+  .btnRemover {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .carrinhoItem {
+    grid-template-columns: 60px 1fr auto;
+    grid-template-areas:
+      "imagem nome remover"
+      "imagem quantidade subtotal"
+      "imagem preco subtotal";
+    padding: 0.8rem;
+  }
+
+  .itemImagem {
+    grid-area: imagem;
+    width: 60px;
+    height: 60px;
+  }
+
+  .itemDetalhes {
+    grid-area: nome;
+  }
+
+  .itemQuantidade {
+    grid-area: quantidade;
+  }
+
+  .itemPreco {
+    grid-area: preco;
+    font-size: 0.9rem;
+  }
+
+  .itemSubtotal {
+    grid-area: subtotal;
+    font-size: 1rem;
+  }
+
+  .btnRemover {
+    grid-area: remover;
+    font-size: 1.2rem;
+  }
+}

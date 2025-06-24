@@ -1,8 +1,8 @@
 import Navbar from '../Components/NavBar';
-import { ProdutosLista } from './Produtos/Components/ProdutosLista';
-import Paginacao from './Produtos/Components/Paginacao';
+import { ProdutosLista } from '../Components/Produtos/Components/ProdutosLista';
+import Paginacao from '../Components/Produtos/Components/Paginacao';
 import { useProdutos } from '../Hooks/useProdutos';
-import style from './Produtos/Style/ProdutoCard.module.css';
+import style from '../Components/Produtos/Style/ProdutoCard.module.css';
 import Footer from '@/Components/Footer';
 
 export default function Catalogo() {

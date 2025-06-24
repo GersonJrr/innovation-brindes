@@ -1,10 +1,10 @@
 import { FaUser, FaLock } from 'react-icons/fa6';
-import Button from './Login/Components/Button';
-import CardLogin from './Login/Components/Card';
-import ContainerLogin from './Login/Components/ContainerLogin';
-import Input from './Login/Components/Input';
-import cardStyles from './Login/style/Card.module.css';
-import containerStyles from './Login/style/Container.module.css';
+import Button from '../Components/Login/Components/Button';
+import CardLogin from '../Components/Login/Components/Card';
+import ContainerLogin from '../Components/Login/Components/ContainerLogin';
+import Input from '../Components/Login/Components/Input';
+import cardStyles from '../Components/Login/style/Card.module.css';
+import containerStyles from '../Components/Login/style/Container.module.css';
 
 export default function Login() {
   return (

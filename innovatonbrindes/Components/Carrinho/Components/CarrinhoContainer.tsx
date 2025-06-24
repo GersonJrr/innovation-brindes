@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from '../Style/CarrinhoContainer.module.css';
 import CarrinhoLista from './CarrinhoLista';
-import CarrinhoResumo from '../Components/CarrinhoResumo';
+import CarrinhoResumo from './CarrinhoResumo';
 
 export default function CarrinhoContainer() {
   return (

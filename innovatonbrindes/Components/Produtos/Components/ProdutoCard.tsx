@@ -5,7 +5,7 @@ import buttonStyle from '../Style/ButtonConfira.module.css';
 import { useCart } from '../../../Context/CartContext';
 import { CorHex, parseRgbCores } from '../../../Utils/parseRgbCores';
 import { buscarCoresPorProdutoId } from '../../../Services/produtosService';
-import Toast from '../Components/Toast'; 
+import Toast from './Toast'; 
 
 type ProdutoCardProps = {
   produto: Produto;

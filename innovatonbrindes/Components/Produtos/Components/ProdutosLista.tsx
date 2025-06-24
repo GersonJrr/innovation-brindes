@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from '../Style/ProdutosLista.module.css';
 import { Produto } from '@/Interface/Produto';
-import { ProdutoCard } from '../Components/ProdutoCard';
+import { ProdutoCard } from './ProdutoCard';
 
 type ProdutosListaProps = {
   produtos: Produto[];

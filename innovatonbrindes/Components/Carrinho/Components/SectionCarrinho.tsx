@@ -5,7 +5,7 @@ export default function SectionCarrinho() {
     <div className={style.container}>
       <h1>Carrinho</h1>
       <div className={style.divStyle}>
-        <a href="https://innovationbrindes.com.br/">
+        <a href="/produtos">
             <span>Home</span>
         </a>
         <span className={style.arrow} />

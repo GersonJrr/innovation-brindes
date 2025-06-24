@@ -17,13 +17,17 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.1",
+    "@eslint/js": "^9.29.0",
     "@tailwindcss/postcss": "^4",
     "@types/js-cookie": "^3.0.6",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@typescript-eslint/eslint-plugin": "^8.35.0",
+    "@typescript-eslint/parser": "^8.35.0",
     "eslint": "^9.29.0",
     "eslint-config-next": "^15.3.4",
+    "eslint-plugin-next": "^0.0.0",
     "eslint-plugin-react": "^7.37.5",
     "tailwindcss": "^4",
     "typescript": "^5"

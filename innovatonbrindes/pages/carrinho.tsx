@@ -6,10 +6,10 @@ import Footer from '@/Components/Footer';
 export default function CarrinhoPage() {
   return (
     <>
-      <Navbar />
-      <SectionCarrinho />
-      <CarrinhoContainer />
-      <Footer />
+      <Navbar/>
+      <SectionCarrinho/>
+      <CarrinhoContainer/>
+      <Footer/>
     </>
   );
 }

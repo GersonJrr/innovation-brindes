@@ -2,40 +2,52 @@ import { FaUser, FaLock } from 'react-icons/fa6';
 import Button from '../Components/Login/Button';
 import CardLogin from '../Components/Login/Card';
 import ContainerLogin from '../Components/Login/ContainerLogin';
-import Input from '../Components/Login/Input';
 
 export default function Login() {
   return (
     <ContainerLogin>
-      <h1 className="text-green-600 text-3xl text-center mb-8 sm:text-2xl">
+      <h1 className="text-verde font-bold text-center mb-7 sm:text-3xl">
         Bem-vindo a Innovation Brindes
       </h1>
 
       <CardLogin>
         <div className="space-y-6">
-          <div className="flex items-center border rounded-full px-4 py-2 focus-within:ring-2 focus-within:ring-green-400">
-            <FaUser className="text-green-600 mr-3" />
-            <Input type="text" placeholder="Usuário" className="flex-grow outline-none" />
+          <div className="relative  rounded-md">
+            <FaUser 
+              className="text-gray-500 absolute left-6 top-1/2 transform -translate-y-1/2 pointer-events-none" 
+            />
+            <input 
+              type="text" 
+              placeholder="Usuário" 
+              className="w-[300px] rounded-[30px] pl-14 border border-gray-300 py-3" 
+            />
           </div>
 
-          <div className="flex items-center border rounded-full px-4 py-2 focus-within:ring-2 focus-within:ring-green-400">
-            <FaLock className="text-green-600 mr-3" />
-            <Input type="password" placeholder="Senha" className="flex-grow outline-none" />
+          <div className="relative rounded-md">
+            <FaLock 
+              className="text-gray-500 absolute left-6 top-1/2 transform -translate-y-1/2 pointer-events-none" 
+            />
+            <input 
+              type="password" 
+              placeholder="Senha" 
+              className="w-[300px] rounded-[30px] pl-14 border border-gray-300 py-3 " 
+            />
           </div>
         </div>
 
-        <div className="flex justify-between items-center mt-4 text-sm text-gray-600">
-          <label className="flex items-center space-x-2">
-            <input type="checkbox" className="form-checkbox text-green-600" />
-            <span>Manter Logado</span>
+        <div className="flex gap-12 items-center mt-4 text-sm text-gray-600">
+          <label className="flex items-center space-x-2 cursor-pointer">
+            <input type="checkbox" className="custom-checkbox" />
+            <span className="text-white select-none">Manter Logado</span>
           </label>
 
-          <a href="/redefinir" className="text-green-600 hover:underline">
+
+          <a href="/redefinir" className="text-branco hover:underline">
             Esqueceu a senha?
           </a>
         </div>
 
-        <Button className="w-full mt-6">Login</Button>
+        <Button>Login</Button>
       </CardLogin>
     </ContainerLogin>
   );

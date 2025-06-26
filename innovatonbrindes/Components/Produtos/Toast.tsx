@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import styles from '../Style/Toast.module.css';
 
 type ToastProps = {
   message: string;
@@ -14,7 +13,20 @@ export default function Toast({ message, onClose, duration = 3000 }: ToastProps)
   }, [onClose, duration]);
 
   return (
-    <div className={styles.toast}>
+    <div
+      className="
+        fixed bottom-5 right-5
+        bg-verdeToast text-branco
+        px-5 py-3
+        rounded-md
+        shadow-lg
+        font-semibold
+        z-[9999]
+        animate-slide-in
+      "
+      role="alert"
+      aria-live="assertive"
+    >
       {message}
     </div>
   );

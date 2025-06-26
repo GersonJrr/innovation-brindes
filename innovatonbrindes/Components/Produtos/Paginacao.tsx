@@ -1,5 +1,4 @@
 import React from 'react';
-import styles from '../Style/Paginacao.module.css';
 
 interface PaginacaoProps {
   paginaAtual: number;
@@ -34,7 +33,7 @@ export default function Paginacao({
       }
 
       if (paginaAtual < totalPaginas - 2) paginas.push('...');
-      
+
       if (!paginas.includes(totalPaginas)) paginas.push(totalPaginas);
     }
 
@@ -44,18 +43,25 @@ export default function Paginacao({
   const paginas = obterPaginasVisiveis();
 
   return (
-    <div className={styles.container}>
+    <div className="mt-12 text-center">
       <button
         onClick={() => onPaginaChange(paginaAtual - 1)}
         disabled={paginaAtual <= 1 || carregando}
-        className={styles.botao}
+        className={`
+          mx-1 px-3 py-1 border rounded
+          border-[#c8e89f] bg-verde text-branco text-base
+          transition-transform duration-200
+          disabled:opacity-60 disabled:cursor-not-allowed
+          hover:scale-105 hover:cursor-pointer
+          ${carregando || paginaAtual <= 1 ? 'hover:scale-100 hover:cursor-not-allowed' : ''}
+        `}
       >
         Anterior
       </button>
 
       {paginas.map((pagina, index) =>
         pagina === '...' ? (
-          <span key={`ellipsis-${index}`} className={styles.ellipsis}>
+          <span key={`ellipsis-${index}`} className="mx-1 inline-block text-branco">
             ...
           </span>
         ) : (
@@ -63,10 +69,16 @@ export default function Paginacao({
             key={pagina}
             onClick={() => onPaginaChange(Number(pagina))}
             disabled={paginaAtual === pagina || carregando}
-            className={`${styles.botao} ${
-              paginaAtual === pagina ? styles.ativo : ''
-            } ${carregando ? styles.desabilitado : ''}`}
             aria-current={paginaAtual === pagina ? 'page' : undefined}
+            className={`
+              mx-1 px-3 py-1 border rounded
+              border-[#c8e89f] text-base
+              transition-transform duration-200
+              ${paginaAtual === pagina
+                ? 'font-bold bg-gray-300 cursor-default hover:scale-100'
+                : 'bg-verde text-branco cursor-pointer hover:scale-105'}
+              ${carregando ? 'opacity-60 cursor-not-allowed hover:scale-100' : ''}
+            `}
           >
             {pagina}
           </button>
@@ -76,7 +88,14 @@ export default function Paginacao({
       <button
         onClick={() => onPaginaChange(paginaAtual + 1)}
         disabled={paginaAtual >= totalPaginas || carregando}
-        className={styles.botao}
+        className={`
+          mx-1 px-3 py-1 border rounded
+          border-[#c8e89f] bg-verde text-branco text-base
+          transition-transform duration-200
+          disabled:opacity-60 disabled:cursor-not-allowed
+          hover:scale-105 hover:cursor-pointer
+          ${carregando || paginaAtual >= totalPaginas ? 'hover:scale-100 hover:cursor-not-allowed' : ''}
+        `}
       >
         {carregando ? 'Carregando...' : 'Próxima'}
       </button>

@@ -1,5 +1,4 @@
 import React from 'react';
-import styles from '../Style/ProdutosLista.module.css';
 import { Produto } from '@/Interface/Produto';
 import { ProdutoCard } from './ProdutoCard';
 
@@ -9,18 +8,27 @@ type ProdutosListaProps = {
 };
 
 export function ProdutosLista({ produtos, carregando = false }: ProdutosListaProps) {
-
   if (carregando) {
-    return <p className={styles.loading}>Carregando produtos...</p>;
+    return <p className="text-center text-gray-500 mt-8">Carregando produtos...</p>;
   }
 
   if (produtos.length === 0) {
-    return <p className={styles.vazio}>Nenhum produto encontrado.</p>;
+    return <p className="text-center text-gray-500 mt-8">Nenhum produto encontrado.</p>;
   }
 
   return (
-    <ul className={styles.produtoLista}>
-      {produtos.map(produto => (
+    <ul
+      className="
+        list-none p-0
+        grid gap-8
+        grid-cols-1
+        sm:grid-cols-2
+        md:grid-cols-3
+        lg:grid-cols-4
+        xl:grid-cols-5
+      "
+    >
+      {produtos.map((produto) => (
         <ProdutoCard key={produto.codigo_produto} produto={produto} />
       ))}
     </ul>

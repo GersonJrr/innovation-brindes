@@ -1,8 +1,7 @@
 import Navbar from '../Components/NavBar';
-import { ProdutosLista } from '../Components/Produtos/Components/ProdutosLista';
-import Paginacao from '../Components/Produtos/Components/Paginacao';
+import { ProdutosLista } from '../Components/Produtos/ProdutosLista';
+import Paginacao from '../Components/Produtos/Paginacao';
 import { useProdutos } from '../Hooks/useProdutos';
-import style from '../Components/Produtos/Style/ProdutoCard.module.css';
 import Footer from '@/Components/Footer';
 
 export default function Catalogo() {
@@ -17,10 +16,11 @@ export default function Catalogo() {
   return (
     <>
       <Navbar />
-      <div className={style.TamanhoTela}>
+      <div className="max-w-[1600px] mx-auto mt-12 px-4">
         <ProdutosLista produtos={produtos} carregando={carregando} />
       </div>
-      <div className={style.EspacoPaginacao}>
+
+      <div className="mb-5">
         <Paginacao
           paginaAtual={paginaAtual}
           totalPaginas={totalPaginas}
@@ -28,7 +28,8 @@ export default function Catalogo() {
           carregando={carregando}
         />
       </div>
-      <Footer/>
+
+      <Footer />
     </>
   );
 }

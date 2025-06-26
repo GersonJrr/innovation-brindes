@@ -4,6 +4,7 @@ import Paginacao from '../Components/Produtos/Paginacao';
 import { useProdutos } from '../Hooks/useProdutos';
 import Footer from '@/Components/Footer';
 
+
 export default function Catalogo() {
   const {
     produtos,
